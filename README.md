@@ -24,8 +24,8 @@
 
 ###### Pinout Information:
 
-|  Board Label | Arduino Pin Definition | ESP32 Pin Number|  Description |  
-| ------------ | ------------ |
+|  Board Label | Arduino Pin Definition | ESP32 Pin Number |  Description | 
+| ------------ | ------------ | ------------ | ------------ |
 | D0 | D0 | 34 | GPIO Pin |
 | D1 | D1 | 35 | GPIO Pin |
 | D2 | D2 | 32 | GPIO Pin |
@@ -41,7 +41,7 @@
 | SW2 | SW2 | 18 | Button Switch 2 (OK) Input |
 | SW3 | SW3 | 19 | Button Switch 3 (Down) Input |
 | SW4 | SW4 | 21 | Button Switch 4 (Up) Input |
-| TX | TX | 1 | UART TX (Connected to USB-UART bridge)
+| TX | TX | 1 | UART TX (Connected to USB-UART bridge) |
 | RX | RX | 3 | UART RX (Connected to USB-UART bridge) |
 | SCL | SCL | 17 | I2C SCL (2k2 pull-up), OLED and FM TX present |
 | SDA | SDA | 16 | I2C SDA (2k2 pull-up), OLED and FM TX present |
