@@ -1,5 +1,5 @@
 # ESP32 FM DevKit (esp32_fmdevkit)
-*ESP32-based development board
+*ESP32-based development board*
 
 #### Features
 ###### - USB to UART bridge with auto boot mode / reset
