@@ -1,0 +1,994 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.CPP</ToolchainName>
+    <ProjectGuid>{ad54c8eb-9783-48fa-9761-adfbc741301f}</ProjectGuid>
+    <avrdevice>ATSAM3X8E</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>FMDevKit_BluetoothAudio</AssemblyName>
+    <Name>FMDevKit_BluetoothAudio</Name>
+    <RootNamespace>FMDevKit_BluetoothAudio</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress />
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue />
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.26.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <ResetRule>0</ResetRule>
+    <EraseKey />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__ESP32_ESp32__</Value>
+      <Value>__ESP32_ESP32__</Value>
+      <Value>ARDUINO=10807</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=240000000L</Value>
+      <Value>printf=iprintf</Value>
+      <Value>__ESP32__</Value>
+      <Value>ESP_PLATFORM</Value>
+      <Value>HAVE_CONFIG_H</Value>
+      <Value>ARDUINO_fm-devkit</Value>
+      <Value>ARDUINO_ARCH_ESP32</Value>
+      <Value>CORE_DEBUG_LEVEL=0</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../../../FMDevKit_BluetoothAudio</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Ticker/src</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Preferences/src</Value>
+      <Value>D:/Dokumenty/Arduino/libraries/QN8027-master/src</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Wire/src</Value>
+      <Value>D:/Dokumenty/Arduino/libraries/Adafruit_SSD1306-master</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/SPI/src</Value>
+      <Value>D:/Dokumenty/Arduino/libraries/Adafruit_GFX_Library</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>D:/Dokumenty/Arduino/libraries</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32/apps</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32/libb64</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/variants/fm-devkit</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/config</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/app_trace</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/app_update</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/asio</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/bootloader_support</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/bt</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/coap</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/console</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/driver</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp-tls</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp32</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_adc_cal</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_event</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_http_client</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_http_server</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_https_ota</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_https_server</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_ringbuf</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/ethernet</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/expat</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/fatfs</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/freemodbus</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/freertos</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/heap</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/idf_test</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/jsmn</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/json</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/libsodium</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/log</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/lwip</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mbedtls</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mdns</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/micro-ecc</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mqtt</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/newlib</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/nghttp</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/nvs_flash</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/openssl</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/protobuf-c</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/protocomm</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/pthread</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/sdmmc</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/smartconfig_ack</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/soc</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/spi_flash</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/spiffs</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/tcp_transport</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/tcpip_adapter</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/ulp</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/unity</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/vfs</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wear_levelling</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wifi_provisioning</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wpa_supplicant</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/xtensa-debug-module</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__ESP32_ESp32__</Value>
+      <Value>__ESP32_ESP32__</Value>
+      <Value>ARDUINO=10807</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=240000000L</Value>
+      <Value>printf=iprintf</Value>
+      <Value>__ESP32__</Value>
+      <Value>ESP_PLATFORM</Value>
+      <Value>HAVE_CONFIG_H</Value>
+      <Value>ARDUINO_fm-devkit</Value>
+      <Value>ARDUINO_ARCH_ESP32</Value>
+      <Value>CORE_DEBUG_LEVEL=0</Value>
+    </ListValues>
+  </armgcccpp.compiler.symbols.DefSymbols>
+  <armgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../../../FMDevKit_BluetoothAudio</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Ticker/src</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Preferences/src</Value>
+      <Value>D:/Dokumenty/Arduino/libraries/QN8027-master/src</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Wire/src</Value>
+      <Value>D:/Dokumenty/Arduino/libraries/Adafruit_SSD1306-master</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/SPI/src</Value>
+      <Value>D:/Dokumenty/Arduino/libraries/Adafruit_GFX_Library</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>D:/Dokumenty/Arduino/libraries</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32/apps</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32/libb64</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/variants/fm-devkit</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/config</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/app_trace</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/app_update</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/asio</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/bootloader_support</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/bt</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/coap</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/console</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/driver</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp-tls</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp32</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_adc_cal</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_event</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_http_client</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_http_server</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_https_ota</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_https_server</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_ringbuf</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/ethernet</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/expat</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/fatfs</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/freemodbus</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/freertos</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/heap</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/idf_test</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/jsmn</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/json</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/libsodium</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/log</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/lwip</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mbedtls</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mdns</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/micro-ecc</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mqtt</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/newlib</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/nghttp</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/nvs_flash</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/openssl</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/protobuf-c</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/protocomm</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/pthread</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/sdmmc</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/smartconfig_ack</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/soc</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/spi_flash</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/spiffs</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/tcp_transport</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/tcpip_adapter</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/ulp</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/unity</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/vfs</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wear_levelling</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wifi_provisioning</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wpa_supplicant</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/xtensa-debug-module</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32</Value>
+    </ListValues>
+  </armgcccpp.compiler.directories.IncludePaths>
+  <armgcccpp.compiler.optimization.level>Optimize for size (-Os)</armgcccpp.compiler.optimization.level>
+  <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+  <armgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.Libraries>
+  <armgcccpp.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>../cmsis/linkerScripts</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.LibrarySearchPaths>
+  <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+  <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsamd21e18a_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+  <armgcccpp.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\samd21\include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+    </ListValues>
+  </armgcccpp.preprocessingassembler.general.IncludePaths>
+</ArmGccCpp>
+    </ToolchainSettings>
+    <VMSETTING_IncludePaths>../../../FMDevKit_BluetoothAudio;C:/Program Files (x86)/Arduino/libraries;D:/Dokumenty/Arduino/libraries;D:/Dokumenty/Arduino/hardware/espressif/esp32/libraries;D:/Dokumenty/Arduino/hardware/espressif/esp32/cores/esp32;D:/Dokumenty/Arduino/hardware/espressif/esp32/cores/esp32/libb64;D:/Dokumenty/Arduino/hardware/espressif/esp32/variants/esp32;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/config;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/bluedroid;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/app_trace;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/app_update;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/bootloader_support;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/bt;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/driver;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/esp32;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/esp_adc_cal;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/ethernet;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/fatfs;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/freertos;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/heap;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/jsmn;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/log;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/mdns;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/mbedtls;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/mbedtls_port;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/newlib;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/nvs_flash;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/openssl;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/spi_flash;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/sdmmc;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/spiffs;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/tcpip_adapter;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/ulp;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/vfs;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/wear_levelling;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/xtensa-debug-module;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/coap;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/console;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/expat;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/json;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/lwip;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/nghttp;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/soc;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/wpa_supplicant;D:/Dokumenty/Arduino/hardware/espressif;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/yun;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/avr;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.2/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.3/include;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/libraries;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/cores/esp32;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/cores/esp32/libb64;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/variants/esp32;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/config;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/bluedroid;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/bluedroid/api;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/app_trace;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/app_update;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/bootloader_support;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/bt;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/driver;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/esp32;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/esp_adc_cal;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/esp_http_client;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/esp-tls;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/ethernet;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/fatfs;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/freertos;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/heap;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/jsmn;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/log;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/mdns;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/mbedtls;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/mbedtls_port;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/newlib;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/nvs_flash;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/openssl;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/spi_flash;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/sdmmc;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/smartconfig_ack;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/spiffs;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/tcpip_adapter;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/ulp;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/vfs;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/wear_levelling;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/xtensa-debug-module;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/coap;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/console;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/expat;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/json;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/lwip;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/nghttp;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/soc;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/wpa_supplicant;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/cores/esp32/apps;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/libraries/Preferences/src;D:/Dokumenty/Arduino/libraries/Adafruit_SSD1306-master;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/libraries/Ticker/src;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/libraries/Wire/src;D:/Dokumenty/Arduino/libraries/Adafruit_GFX_Library;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/libraries/SPI/src;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/variants/fm-devkit;D:/Dokumenty/Arduino/libraries/QN8027-master/src;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Ticker/src;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Preferences/src;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Wire/src;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32/apps;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32/libb64;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/variants/fm-devkit;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/config;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/app_trace;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/app_update;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/asio;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/bootloader_support;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/bt;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/coap;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/console;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/driver;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp-tls;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp32;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_adc_cal;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_event;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_http_client;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_http_server;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_https_ota;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_https_server;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_ringbuf;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/ethernet;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/expat;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/fatfs;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/freemodbus;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/freertos;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/heap;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/idf_test;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/jsmn;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/json;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/libsodium;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/log;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/lwip;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mbedtls;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mdns;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/micro-ecc;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mqtt;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/newlib;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/nghttp;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/nvs_flash;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/openssl;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/protobuf-c;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/protocomm;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/pthread;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/sdmmc;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/smartconfig_ack;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/soc;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/spi_flash;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/spiffs;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/tcp_transport;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/tcpip_adapter;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/ulp;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/unity;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/vfs;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wear_levelling;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wifi_provisioning;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wpa_supplicant;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/xtensa-debug-module;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/SPI/src;</VMSETTING_IncludePaths>
+    <VisualMicroSettings>
+      <VisualMicroSettings>
+        <arduino.board.name>esp32_fm-devkit</arduino.board.name>
+        <arduino.board.desc>ESP32 FM DevKit</arduino.board.desc>
+        <arduino.board.property_bag>name=ESP32 FM DevKit
+upload.tool=esptool
+upload.maximum_size=1310720
+upload.maximum_data_size=327680
+upload.wait_for_upload_port=true
+serial.disableDTR=true
+serial.disableRTS=true
+build.mcu=esp32
+build.core=esp32
+build.variant=fm-devkit
+build.board=fm-devkit
+build.f_cpu=240000000L
+build.flash_size=4MB
+build.flash_freq=80m
+build.flash_mode=dio
+build.boot=dio
+build.partitions=default
+build.defines=
+menu.UploadSpeed.921600=921600
+menu.UploadSpeed.921600.upload.speed=921600
+menu.UploadSpeed.115200=115200
+menu.UploadSpeed.115200.upload.speed=115200
+menu.UploadSpeed.256000.windows=256000
+menu.UploadSpeed.256000.upload.speed=256000
+menu.UploadSpeed.230400.windows.upload.speed=256000
+menu.UploadSpeed.230400=230400
+menu.UploadSpeed.230400.upload.speed=230400
+menu.UploadSpeed.460800.linux=460800
+menu.UploadSpeed.460800.macosx=460800
+menu.UploadSpeed.460800.upload.speed=460800
+menu.UploadSpeed.512000.windows=512000
+menu.UploadSpeed.512000.upload.speed=512000
+menu.DebugLevel.none=None
+menu.DebugLevel.none.build.code_debug=0
+menu.DebugLevel.error=Error
+menu.DebugLevel.error.build.code_debug=1
+menu.DebugLevel.warn=Warn
+menu.DebugLevel.warn.build.code_debug=2
+menu.DebugLevel.info=Info
+menu.DebugLevel.info.build.code_debug=3
+menu.DebugLevel.debug=Debug
+menu.DebugLevel.debug.build.code_debug=4
+menu.DebugLevel.verbose=Verbose
+menu.DebugLevel.verbose.build.code_debug=5
+menu.UploadSpeed.256000=256000
+menu.UploadSpeed.512000=512000
+runtime.ide.path=C:\Program Files (x86)\Arduino
+runtime.os=windows
+build.system.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.0\system
+runtime.ide.version=10803
+target_package=esp32
+target_platform=esp32
+runtime.hardware.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\hardware\esp32
+originalid=fm-devkit
+version=1.0.0
+tools.esptool.path={runtime.tools.esptool.path}
+tools.esptool.cmd=esptool.exe
+tools.esptool.cmd.linux=esptool.py
+tools.esptool.cmd.windows=esptool.exe
+tools.esptool.network_cmd="{runtime.platform.path}/tools/espota.exe"
+tools.esptool.network_cmd.windows="{runtime.platform.path}/tools/espota.exe"
+tools.gen_esp32part.cmd="{runtime.platform.path}/tools/gen_esp32part.exe"
+tools.gen_esp32part.cmd.windows="{runtime.platform.path}/tools/gen_esp32part.exe"
+compiler.warning_flags=-w
+compiler.warning_flags.none=-w
+compiler.warning_flags.default=
+compiler.warning_flags.more=-Wall -Werror=all
+compiler.warning_flags.all=-Wall -Werror=all -Wextra
+compiler.path={runtime.tools.xtensa-esp32-elf-gcc.path}/bin/
+compiler.sdk.path={runtime.platform.path}/tools/sdk
+compiler.cpreprocessor.flags=-DESP_PLATFORM -DMBEDTLS_CONFIG_FILE="mbedtls/esp_config.h" -DHAVE_CONFIG_H "-I{compiler.sdk.path}/include/config" "-I{compiler.sdk.path}/include/bluedroid" "-I{compiler.sdk.path}/include/bluedroid/api" "-I{compiler.sdk.path}/include/app_trace" "-I{compiler.sdk.path}/include/app_update" "-I{compiler.sdk.path}/include/bootloader_support" "-I{compiler.sdk.path}/include/bt" "-I{compiler.sdk.path}/include/driver" "-I{compiler.sdk.path}/include/esp32" "-I{compiler.sdk.path}/include/esp_adc_cal" "-I{compiler.sdk.path}/include/esp_http_client" "-I{compiler.sdk.path}/include/esp-tls" "-I{compiler.sdk.path}/include/ethernet" "-I{compiler.sdk.path}/include/fatfs" "-I{compiler.sdk.path}/include/freertos" "-I{compiler.sdk.path}/include/heap" "-I{compiler.sdk.path}/include/jsmn" "-I{compiler.sdk.path}/include/log" "-I{compiler.sdk.path}/include/mdns" "-I{compiler.sdk.path}/include/mbedtls" "-I{compiler.sdk.path}/include/mbedtls_port" "-I{compiler.sdk.path}/include/newlib" "-I{compiler.sdk.path}/include/nvs_flash" "-I{compiler.sdk.path}/include/openssl" "-I{compiler.sdk.path}/include/spi_flash" "-I{compiler.sdk.path}/include/sdmmc" "-I{compiler.sdk.path}/include/smartconfig_ack" "-I{compiler.sdk.path}/include/spiffs" "-I{compiler.sdk.path}/include/tcpip_adapter" "-I{compiler.sdk.path}/include/ulp" "-I{compiler.sdk.path}/include/vfs" "-I{compiler.sdk.path}/include/wear_levelling" "-I{compiler.sdk.path}/include/xtensa-debug-module" "-I{compiler.sdk.path}/include/coap" "-I{compiler.sdk.path}/include/console" "-I{compiler.sdk.path}/include/expat" "-I{compiler.sdk.path}/include/json" "-I{compiler.sdk.path}/include/lwip" "-I{compiler.sdk.path}/include/newlib" "-I{compiler.sdk.path}/include/nghttp" "-I{compiler.sdk.path}/include/soc" "-I{compiler.sdk.path}/include/wpa_supplicant"
+compiler.c.cmd=xtensa-esp32-elf-gcc
+compiler.c.flags=-std=gnu99 -Os -g3 -fstack-protector -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -mlongcalls -nostdlib -Wpointer-arith {compiler.warning_flags} -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-sign-compare -Wno-old-style-declaration -MMD -c
+compiler.cpp.cmd=xtensa-esp32-elf-g++
+compiler.cpp.flags=-std=gnu++11 -fno-exceptions -Os -g3 -Wpointer-arith -fexceptions -fstack-protector -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -mlongcalls -nostdlib {compiler.warning_flags} -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-sign-compare -fno-rtti -MMD -c
+compiler.S.cmd=xtensa-esp32-elf-gcc
+compiler.S.flags=-c -g3 -x assembler-with-cpp -MMD -mlongcalls
+compiler.c.elf.cmd=xtensa-esp32-elf-gcc
+compiler.c.elf.flags=-nostdlib "-L{compiler.sdk.path}/lib" "-L{compiler.sdk.path}/ld" -T esp32_out.ld -T esp32.common.ld -T esp32.rom.ld -T esp32.peripherals.ld -T esp32.rom.spiram_incompatible_fns.ld -u ld_include_panic_highint_hdl -u call_user_start_cpu0 -Wl,--gc-sections -Wl,-static -Wl,--undefined=uxTopUsedPriority  -u __cxa_guard_dummy -u __cxx_fatal_exception
+compiler.c.elf.libs=-lgcc -lopenssl -lbtdm_app -lfatfs -lwps -lcoexist -lwear_levelling -lesp_http_client -lhal -lnewlib -ldriver -lbootloader_support -lpp -lmesh -lsmartconfig -ljsmn -lwpa -lethernet -lphy -lapp_trace -lconsole -lulp -lwpa_supplicant -lfreertos -lbt -lmicro-ecc -lcxx -lxtensa-debug-module -lmdns -lvfs -lsoc -lcore -lsdmmc -lcoap -ltcpip_adapter -lc_nano -lesp-tls -lrtc -lspi_flash -lwpa2 -lesp32 -lapp_update -lnghttp -lspiffs -lespnow -lnvs_flash -lesp_adc_cal -llog -lsmartconfig_ack -lexpat -lm -lc -lheap -lmbedtls -llwip -lnet80211 -lpthread -ljson  -lstdc++
+compiler.as.cmd=xtensa-esp32-elf-as
+compiler.ar.cmd=xtensa-esp32-elf-ar
+compiler.ar.flags=cru
+compiler.size.cmd=xtensa-esp32-elf-size
+build.code_debug=0
+build.extra_flags=-DESP32 -DCORE_DEBUG_LEVEL={build.code_debug} {build.defines}
+compiler.c.extra_flags=
+compiler.c.elf.extra_flags=
+compiler.S.extra_flags=
+compiler.cpp.extra_flags=
+compiler.ar.extra_flags=
+compiler.objcopy.eep.extra_flags=
+compiler.elf2hex.extra_flags=
+recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.cpreprocessor.flags} {compiler.c.flags} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} -DARDUINO_BOARD="{build.board}" -DARDUINO_VARIANT="{build.variant}" {compiler.c.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpreprocessor.flags} {compiler.cpp.flags} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} -DARDUINO_BOARD="{build.board}" -DARDUINO_VARIANT="{build.variant}" {compiler.cpp.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.S.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.cpreprocessor.flags} {compiler.S.flags} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} -DARDUINO_BOARD="{build.board}" -DARDUINO_VARIANT="{build.variant}" {compiler.S.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} {compiler.ar.extra_flags} "{archive_file_path}" "{object_file}"
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} {compiler.c.elf.extra_flags} -Wl,--start-group {object_files} "{build.path}/{archive_file}" {compiler.c.elf.libs} -Wl,--end-group -Wl,-EL -o "{build.path}/{build.project_name}.elf"
+recipe.objcopy.eep.pattern={tools.gen_esp32part.cmd} -q "{runtime.platform.path}/tools/partitions/{build.partitions}.csv" "{build.path}/{build.project_name}.partitions.bin"
+recipe.objcopy.hex.pattern="{tools.esptool.path}/{tools.esptool.cmd}" --chip esp32 elf2image --flash_mode "{build.flash_mode}" --flash_freq "{build.flash_freq}" --flash_size "{build.flash_size}" -o "{build.path}/{build.project_name}.bin" "{build.path}/{build.project_name}.elf"
+recipe.objcopy.hex.pattern.linux=python "{tools.esptool.path}/{tools.esptool.cmd}" --chip esp32 elf2image --flash_mode "{build.flash_mode}" --flash_freq "{build.flash_freq}" --flash_size "{build.flash_size}" -o "{build.path}/{build.project_name}.bin" "{build.path}/{build.project_name}.elf"
+recipe.output.tmp_file={build.project_name}.bin
+recipe.output.save_file={build.project_name}.{build.variant}.bin
+recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build.project_name}.elf"
+recipe.size.regex=^(?:\.iram0\.text|\.iram0\.vectors|\.dram0\.data|\.flash\.text|\.flash\.rodata|)\s+([0-9]+).*
+recipe.size.regex.data=^(?:\.dram0\.data|\.dram0\.bss|\.noinit)\s+([0-9]+).*
+tools.esptool.upload.protocol=esp32
+tools.esptool.upload.params.verbose=
+tools.esptool.upload.params.quiet=
+tools.esptool.upload.pattern="{path}/{cmd}" --chip esp32 --port "{serial.port}" --baud {upload.speed}  --before default_reset --after hard_reset write_flash -z --flash_mode {build.flash_mode} --flash_freq {build.flash_freq} --flash_size detect 0xe000 "{runtime.platform.path}/tools/partitions/boot_app0.bin" 0x1000 "{runtime.platform.path}/tools/sdk/bin/bootloader_{build.boot}_{build.flash_freq}.bin" 0x10000 "{build.path}/{build.project_name}.bin" 0x8000 "{build.path}/{build.project_name}.partitions.bin"
+tools.esptool.upload.pattern.linux=python "{path}/{cmd}" --chip esp32 --port "{serial.port}" --baud {upload.speed}  --before default_reset --after hard_reset write_flash -z --flash_mode {build.flash_mode} --flash_freq {build.flash_freq} --flash_size detect 0xe000 "{runtime.platform.path}/tools/partitions/boot_app0.bin" 0x1000 "{runtime.platform.path}/tools/sdk/bin/bootloader_{build.boot}_{build.flash_freq}.bin" 0x10000 "{build.path}/{build.project_name}.bin" 0x8000 "{build.path}/{build.project_name}.partitions.bin"
+tools.esptool.upload.network_pattern={network_cmd} -i "{serial.port}" -p "{network.port}" "--auth={network.password}" -f "{build.path}/{build.project_name}.bin"
+vm.platform.root.path=C:\Program Files (x86)\Atmel\Studio\7.0\Extensions\2bvsfff5.20h\Micro Platforms\arduino16x
+runtime.tools.xtensa-esp32-elf-gcc.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\xtensa-esp32-elf-gcc\1.22.0-80-g6c4433a-5.2.0
+runtime.tools.xtensa-esp32-elf-gcc-1.22.0-80-g6c4433a-5.2.0.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\xtensa-esp32-elf-gcc\1.22.0-80-g6c4433a-5.2.0
+runtime.tools.esptool.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\esptool\2.3.1
+runtime.tools.esptool-2.3.1.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\esptool\2.3.1
+runtime.tools.mkspiffs.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\mkspiffs\0.2.3
+runtime.tools.mkspiffs-0.2.3.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\mkspiffs\0.2.3
+runtime.tools.arduinoOTA.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.arduinoOTA-1.1.1.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.arm-none-eabi-gcc.path=C:\Users\Matas\AppData\Local\arduino15\packages\STM32\tools\arm-none-eabi-gcc\6-2017-q2-update
+runtime.tools.arm-none-eabi-gcc-4.8.3-2014q1.path=C:\Users\Matas\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1
+runtime.tools.arm-none-eabi-gcc-6-2017-q2-update.path=C:\Users\Matas\AppData\Local\arduino15\packages\STM32\tools\arm-none-eabi-gcc\6-2017-q2-update
+runtime.tools.avrdude.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.avrdude-6.3.0-arduino9.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.avr-gcc.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.avr-gcc-4.9.2-atmel3.5.4-arduino2.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.CMSIS.path=C:\Users\Matas\AppData\Local\arduino15\packages\arduino\tools\CMSIS\4.5.0
+runtime.tools.CMSIS-4.5.0.path=C:\Users\Matas\AppData\Local\arduino15\packages\arduino\tools\CMSIS\4.5.0
+runtime.tools.esptool-0.4.13.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp8266\tools\esptool\0.4.13
+runtime.tools.gcc-arm-none-eabi.path=C:\Users\Matas\AppData\Local\arduino15\packages\sandeepmistry\tools\gcc-arm-none-eabi\5_2-2015q4
+runtime.tools.gcc-arm-none-eabi-5_2-2015q4.path=C:\Users\Matas\AppData\Local\arduino15\packages\sandeepmistry\tools\gcc-arm-none-eabi\5_2-2015q4
+runtime.tools.mkspiffs-0.2.0.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp8266\tools\mkspiffs\0.2.0
+runtime.tools.nrf5x-cl-tools.path=C:\Users\Matas\AppData\Local\arduino15\packages\arduino\tools\nrf5x-cl-tools\9.3.1
+runtime.tools.nrf5x-cl-tools-9.3.1.path=C:\Users\Matas\AppData\Local\arduino15\packages\arduino\tools\nrf5x-cl-tools\9.3.1
+runtime.tools.openocd.path=C:\Users\Matas\AppData\Local\arduino15\packages\sandeepmistry\tools\openocd\0.10.0-dev.nrf5
+runtime.tools.openocd-0.10.0-arduino1-static.path=C:\Users\Matas\AppData\Local\arduino15\packages\arduino\tools\openocd\0.10.0-arduino1-static
+runtime.tools.openocd-0.10.0-dev.nrf5.path=C:\Users\Matas\AppData\Local\arduino15\packages\sandeepmistry\tools\openocd\0.10.0-dev.nrf5
+runtime.tools.sdk.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\sdk\lib
+runtime.tools.sdk-bin.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\sdk\bin
+runtime.tools.sdk-include.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\sdk\include
+runtime.tools.sdk-ld.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\sdk\ld
+runtime.tools.sdk-lib.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\sdk\lib
+runtime.tools.STM32Tools.path=C:\Users\Matas\AppData\Local\arduino15\packages\STM32\tools\STM32Tools\2017.9.22
+runtime.tools.STM32Tools-2017.9.22.path=C:\Users\Matas\AppData\Local\arduino15\packages\STM32\tools\STM32Tools\2017.9.22
+runtime.tools.tools-avr.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.xtensa-lx106-elf-gcc.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2
+runtime.tools.xtensa-lx106-elf-gcc-1.20.0-26-gb404fb9-2.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2
+runtime.vm.boardinfo.id=esp32_fm-devkit
+runtime.vm.boardinfo.name=esp32_fm-devkit
+runtime.vm.boardinfo.desc=ESP32 FM DevKit
+runtime.vm.boardinfo.src_location=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.0
+ide.hint=Use installed IDE. Provides built-in hardware, reference/help and libraries.
+ide.location.key=Arduino16x
+ide.location.ide.winreg=Arduino 1.6.x Application
+ide.location.sketchbook.winreg=Arduino 1.6.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.default.revision_name=1.9.0
+ide.default.version=10800
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=Arduino.h
+ide.exe_name=arduino
+ide.recipe.preproc.defines.flags=-w -x c++ -E -dM
+ide.platformswithoutpackage=false
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionGTEQ=160
+ide.exe=arduino.exe
+ide.builder.exe=arduinobuilder.exe
+ide.builder.name=Arduino Builder
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+ide.help.reference.path=reference
+ide.help.reference.path2=reference\www.arduino.cc\en\Reference
+ide.help.reference.serial=reference\www.arduino.cc\en\Serial
+ide.location.preferences.portable={runtime.ide.path}\portable
+ide.location.preferences.arduinoData={runtime.sketchbook.path}\ArduinoData
+ide.location.preferences=%VM_APPDATA_LOCAL%\arduino15\preferences.txt
+ide.location.preferences_fallback=%VM_APPDATA_ROAMING%\arduino15\preferences.txt
+ide.location.contributions=%VM_APPDATA_LOCAL%\arduino15
+ide.location.contributions_fallback=%VM_APPDATA_ROAMING%\arduino15
+ide.contributions.boards.allow=true
+ide.contributions.boards.ignore_unless_rewrite_found=true
+ide.contributions.libraries.allow=true
+ide.contributions.boards.support.urls.wiki=https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls
+ide.create_platforms_from_boardsTXT.teensy=build.core
+vm.debug=true
+software=ARDUINO
+ssh.user.name=root
+ssh.user.default.password=arduino
+ssh.host.wwwfiles.path=/www/sd
+build.working_directory={runtime.ide.path}\java\bin
+ide.appid=arduino16x
+location.sketchbook=D:\Dokumenty\Arduino
+build.core.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.0\cores\esp32
+vm.core.include=arduino.h
+vm.boardsource.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.0
+runtime.platform.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.0
+vm.platformname.name=esp32
+build.arch=ESP32
+builder.noino=false
+build.architecture=1.22.0-80-g6c4433a-5.2.0
+vmresolved.compiler.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\xtensa-esp32-elf-gcc\1.22.0-80-g6c4433a-5.2.0\bin\
+vmresolved.tools.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\xtensa-esp32-elf-gcc\1.22.0-80-g6c4433a-5.2.0
+intellisense.include.paths={runtime.hardware.path}
+build.project_name=FMDevKit_BluetoothAudio.ino
+build.project_path=D:\FOG\DevKits\FW\FMDevKit_BluetoothAudio
+sketch_path=D:\FOG\DevKits\FW\FMDevKit_BluetoothAudio
+ProjectDir=D:\FOG\DevKits\FW\FMDevKit_BluetoothAudio\
+build.path=C:\Users\Matas\AppData\Local\Temp\VMBuilds\FMDevKit_BluetoothAudio\esp32_fm-devkit\Debug
+</arduino.board.property_bag>
+        <arduino.build.mcu>esp32</arduino.build.mcu>
+        <arduino.build.f_cpu>240000000L</arduino.build.f_cpu>
+        <arduino.build.core>esp32</arduino.build.core>
+        <arduino.upload.maximum_size>1310720</arduino.upload.maximum_size>
+        <visualmicro.application.name>arduino16x</visualmicro.application.name>
+        <visualmicro.package.name>esp32</visualmicro.package.name>
+        <visualmicro.platform.name>esp32</visualmicro.platform.name>
+        <vm.upload.useprogrammer>0</vm.upload.useprogrammer>
+        <arduino.upload.port>COM30</arduino.upload.port>
+        <custom_esp32_esp32_UploadSpeed>921600</custom_esp32_esp32_UploadSpeed>
+        <custom_esp32_esp32_DebugLevel>verbose</custom_esp32_esp32_DebugLevel>
+        <custom_esp32_esp32_PartitionScheme>default</custom_esp32_esp32_PartitionScheme>
+        <custom_esp32_esp32_FlashMode>qio</custom_esp32_esp32_FlashMode>
+        <custom_esp32_esp32_FlashFreq>40</custom_esp32_esp32_FlashFreq>
+        <custom_esp32_esp32_FlashSize>4M</custom_esp32_esp32_FlashSize>
+        <custom_esp32_esp32_PSRAM>disabled</custom_esp32_esp32_PSRAM>
+        <custom_esp32_fm-devkit_DebugLevel>none</custom_esp32_fm-devkit_DebugLevel>
+        <ValidatedAS7>1</ValidatedAS7>
+      </VisualMicroSettings>
+    </VisualMicroSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__ESP32_ESp32__</Value>
+      <Value>__ESP32_ESP32__</Value>
+      <Value>ARDUINO=10807</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=240000000L</Value>
+      <Value>printf=iprintf</Value>
+      <Value>__ESP32__</Value>
+      <Value>ESP_PLATFORM</Value>
+      <Value>HAVE_CONFIG_H</Value>
+      <Value>ARDUINO_fm-devkit</Value>
+      <Value>ARDUINO_ARCH_ESP32</Value>
+      <Value>CORE_DEBUG_LEVEL=0</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../../../FMDevKit_BluetoothAudio</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Ticker/src</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Preferences/src</Value>
+      <Value>D:/Dokumenty/Arduino/libraries/QN8027-master/src</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Wire/src</Value>
+      <Value>D:/Dokumenty/Arduino/libraries/Adafruit_SSD1306-master</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/SPI/src</Value>
+      <Value>D:/Dokumenty/Arduino/libraries/Adafruit_GFX_Library</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>D:/Dokumenty/Arduino/libraries</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32/apps</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32/libb64</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/variants/fm-devkit</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/config</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/app_trace</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/app_update</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/asio</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/bootloader_support</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/bt</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/coap</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/console</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/driver</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp-tls</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp32</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_adc_cal</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_event</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_http_client</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_http_server</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_https_ota</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_https_server</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_ringbuf</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/ethernet</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/expat</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/fatfs</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/freemodbus</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/freertos</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/heap</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/idf_test</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/jsmn</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/json</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/libsodium</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/log</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/lwip</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mbedtls</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mdns</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/micro-ecc</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mqtt</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/newlib</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/nghttp</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/nvs_flash</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/openssl</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/protobuf-c</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/protocomm</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/pthread</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/sdmmc</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/smartconfig_ack</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/soc</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/spi_flash</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/spiffs</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/tcp_transport</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/tcpip_adapter</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/ulp</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/unity</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/vfs</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wear_levelling</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wifi_provisioning</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wpa_supplicant</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/xtensa-debug-module</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__ESP32_ESp32__</Value>
+      <Value>__ESP32_ESP32__</Value>
+      <Value>ARDUINO=10807</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=240000000L</Value>
+      <Value>printf=iprintf</Value>
+      <Value>__ESP32__</Value>
+      <Value>ESP_PLATFORM</Value>
+      <Value>HAVE_CONFIG_H</Value>
+      <Value>ARDUINO_fm-devkit</Value>
+      <Value>ARDUINO_ARCH_ESP32</Value>
+      <Value>CORE_DEBUG_LEVEL=0</Value>
+    </ListValues>
+  </armgcccpp.compiler.symbols.DefSymbols>
+  <armgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../../../FMDevKit_BluetoothAudio</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Ticker/src</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Preferences/src</Value>
+      <Value>D:/Dokumenty/Arduino/libraries/QN8027-master/src</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Wire/src</Value>
+      <Value>D:/Dokumenty/Arduino/libraries/Adafruit_SSD1306-master</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/SPI/src</Value>
+      <Value>D:/Dokumenty/Arduino/libraries/Adafruit_GFX_Library</Value>
+      <Value>C:/Program Files (x86)/Arduino/libraries</Value>
+      <Value>D:/Dokumenty/Arduino/libraries</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32/apps</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32/libb64</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/variants/fm-devkit</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/config</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/app_trace</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/app_update</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/asio</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/bootloader_support</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/bt</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/coap</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/console</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/driver</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp-tls</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp32</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_adc_cal</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_event</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_http_client</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_http_server</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_https_ota</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_https_server</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_ringbuf</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/ethernet</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/expat</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/fatfs</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/freemodbus</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/freertos</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/heap</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/idf_test</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/jsmn</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/json</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/libsodium</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/log</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/lwip</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mbedtls</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mdns</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/micro-ecc</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mqtt</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/newlib</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/nghttp</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/nvs_flash</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/openssl</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/protobuf-c</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/protocomm</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/pthread</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/sdmmc</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/smartconfig_ack</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/soc</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/spi_flash</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/spiffs</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/tcp_transport</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/tcpip_adapter</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/ulp</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/unity</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/vfs</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wear_levelling</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wifi_provisioning</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wpa_supplicant</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/xtensa-debug-module</Value>
+      <Value>C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32</Value>
+    </ListValues>
+  </armgcccpp.compiler.directories.IncludePaths>
+  <armgcccpp.compiler.optimization.level>Optimize for size (-Os)</armgcccpp.compiler.optimization.level>
+  <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+  <armgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.Libraries>
+  <armgcccpp.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>../cmsis/linkerScripts</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.LibrarySearchPaths>
+  <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+  <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsamd21e18a_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+  <armgcccpp.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\samd21\include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+    </ListValues>
+  </armgcccpp.preprocessingassembler.general.IncludePaths>
+</ArmGccCpp>
+    </ToolchainSettings>
+    <VMSETTING_IncludePaths>../../../FMDevKit_BluetoothAudio;C:/Program Files (x86)/Arduino/libraries;D:/Dokumenty/Arduino/libraries;D:/Dokumenty/Arduino/hardware/espressif/esp32/libraries;D:/Dokumenty/Arduino/hardware/espressif/esp32/cores/esp32;D:/Dokumenty/Arduino/hardware/espressif/esp32/cores/esp32/libb64;D:/Dokumenty/Arduino/hardware/espressif/esp32/variants/esp32;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/config;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/bluedroid;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/app_trace;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/app_update;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/bootloader_support;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/bt;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/driver;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/esp32;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/esp_adc_cal;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/ethernet;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/fatfs;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/freertos;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/heap;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/jsmn;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/log;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/mdns;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/mbedtls;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/mbedtls_port;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/newlib;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/nvs_flash;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/openssl;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/spi_flash;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/sdmmc;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/spiffs;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/tcpip_adapter;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/ulp;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/vfs;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/wear_levelling;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/xtensa-debug-module;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/coap;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/console;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/expat;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/json;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/lwip;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/nghttp;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/soc;D:/Dokumenty/Arduino/hardware/espressif/esp32/tools/sdk/include/wpa_supplicant;D:/Dokumenty/Arduino/hardware/espressif;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/yun;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/avr;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.2/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.3/include;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/libraries;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/cores/esp32;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/cores/esp32/libb64;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/variants/esp32;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/config;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/bluedroid;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/bluedroid/api;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/app_trace;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/app_update;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/bootloader_support;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/bt;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/driver;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/esp32;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/esp_adc_cal;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/esp_http_client;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/esp-tls;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/ethernet;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/fatfs;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/freertos;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/heap;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/jsmn;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/log;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/mdns;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/mbedtls;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/mbedtls_port;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/newlib;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/nvs_flash;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/openssl;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/spi_flash;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/sdmmc;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/smartconfig_ack;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/spiffs;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/tcpip_adapter;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/ulp;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/vfs;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/wear_levelling;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/xtensa-debug-module;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/coap;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/console;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/expat;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/json;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/lwip;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/nghttp;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/soc;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/tools/sdk/include/wpa_supplicant;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/cores/esp32/apps;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/libraries/Preferences/src;D:/Dokumenty/Arduino/libraries/Adafruit_SSD1306-master;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/libraries/Ticker/src;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/libraries/Wire/src;D:/Dokumenty/Arduino/libraries/Adafruit_GFX_Library;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/libraries/SPI/src;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.0/variants/fm-devkit;D:/Dokumenty/Arduino/libraries/QN8027-master/src;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Ticker/src;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Preferences/src;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/Wire/src;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32/apps;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/cores/esp32/libb64;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/variants/fm-devkit;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/config;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/app_trace;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/app_update;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/asio;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/bootloader_support;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/bt;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/coap;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/console;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/driver;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp-tls;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp32;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_adc_cal;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_event;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_http_client;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_http_server;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_https_ota;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_https_server;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/esp_ringbuf;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/ethernet;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/expat;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/fatfs;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/freemodbus;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/freertos;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/heap;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/idf_test;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/jsmn;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/json;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/libsodium;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/log;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/lwip;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mbedtls;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mdns;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/micro-ecc;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/mqtt;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/newlib;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/nghttp;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/nvs_flash;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/openssl;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/protobuf-c;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/protocomm;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/pthread;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/sdmmc;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/smartconfig_ack;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/soc;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/spi_flash;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/spiffs;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/tcp_transport;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/tcpip_adapter;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/ulp;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/unity;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/vfs;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wear_levelling;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wifi_provisioning;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/wpa_supplicant;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/tools/sdk/include/xtensa-debug-module;C:/Users/Matas/AppData/Local/arduino15/packages/esp32/hardware/esp32/1.0.1-rc1/libraries/SPI/src;</VMSETTING_IncludePaths>
+    <VisualMicroSettings>
+      <VisualMicroSettings>
+        <arduino.board.name>esp32_fm-devkit</arduino.board.name>
+        <arduino.board.desc>ESP32 FM DevKit</arduino.board.desc>
+        <arduino.board.property_bag>name=ESP32 FM DevKit
+upload.tool=esptool
+upload.maximum_size=1310720
+upload.maximum_data_size=327680
+upload.wait_for_upload_port=true
+serial.disableDTR=true
+serial.disableRTS=true
+build.mcu=esp32
+build.core=esp32
+build.variant=fm-devkit
+build.board=fm-devkit
+build.f_cpu=240000000L
+build.flash_size=4MB
+build.flash_freq=80m
+build.flash_mode=dio
+build.boot=dio
+build.partitions=default
+build.defines=
+menu.UploadSpeed.921600=921600
+menu.UploadSpeed.921600.upload.speed=921600
+menu.UploadSpeed.115200=115200
+menu.UploadSpeed.115200.upload.speed=115200
+menu.UploadSpeed.256000.windows=256000
+menu.UploadSpeed.256000.upload.speed=256000
+menu.UploadSpeed.230400.windows.upload.speed=256000
+menu.UploadSpeed.230400=230400
+menu.UploadSpeed.230400.upload.speed=230400
+menu.UploadSpeed.460800.linux=460800
+menu.UploadSpeed.460800.macosx=460800
+menu.UploadSpeed.460800.upload.speed=460800
+menu.UploadSpeed.512000.windows=512000
+menu.UploadSpeed.512000.upload.speed=512000
+menu.DebugLevel.none=None
+menu.DebugLevel.none.build.code_debug=0
+menu.DebugLevel.error=Error
+menu.DebugLevel.error.build.code_debug=1
+menu.DebugLevel.warn=Warn
+menu.DebugLevel.warn.build.code_debug=2
+menu.DebugLevel.info=Info
+menu.DebugLevel.info.build.code_debug=3
+menu.DebugLevel.debug=Debug
+menu.DebugLevel.debug.build.code_debug=4
+menu.DebugLevel.verbose=Verbose
+menu.DebugLevel.verbose.build.code_debug=5
+menu.UploadSpeed.256000=256000
+menu.UploadSpeed.512000=512000
+runtime.ide.path=C:\Program Files (x86)\Arduino
+runtime.os=windows
+build.system.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.0\system
+runtime.ide.version=10803
+target_package=esp32
+target_platform=esp32
+runtime.hardware.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\hardware\esp32
+originalid=fm-devkit
+version=1.0.0
+tools.esptool.path={runtime.tools.esptool.path}
+tools.esptool.cmd=esptool.exe
+tools.esptool.cmd.linux=esptool.py
+tools.esptool.cmd.windows=esptool.exe
+tools.esptool.network_cmd="{runtime.platform.path}/tools/espota.exe"
+tools.esptool.network_cmd.windows="{runtime.platform.path}/tools/espota.exe"
+tools.gen_esp32part.cmd="{runtime.platform.path}/tools/gen_esp32part.exe"
+tools.gen_esp32part.cmd.windows="{runtime.platform.path}/tools/gen_esp32part.exe"
+compiler.warning_flags=-w
+compiler.warning_flags.none=-w
+compiler.warning_flags.default=
+compiler.warning_flags.more=-Wall -Werror=all
+compiler.warning_flags.all=-Wall -Werror=all -Wextra
+compiler.path={runtime.tools.xtensa-esp32-elf-gcc.path}/bin/
+compiler.sdk.path={runtime.platform.path}/tools/sdk
+compiler.cpreprocessor.flags=-DESP_PLATFORM -DMBEDTLS_CONFIG_FILE="mbedtls/esp_config.h" -DHAVE_CONFIG_H "-I{compiler.sdk.path}/include/config" "-I{compiler.sdk.path}/include/bluedroid" "-I{compiler.sdk.path}/include/bluedroid/api" "-I{compiler.sdk.path}/include/app_trace" "-I{compiler.sdk.path}/include/app_update" "-I{compiler.sdk.path}/include/bootloader_support" "-I{compiler.sdk.path}/include/bt" "-I{compiler.sdk.path}/include/driver" "-I{compiler.sdk.path}/include/esp32" "-I{compiler.sdk.path}/include/esp_adc_cal" "-I{compiler.sdk.path}/include/esp_http_client" "-I{compiler.sdk.path}/include/esp-tls" "-I{compiler.sdk.path}/include/ethernet" "-I{compiler.sdk.path}/include/fatfs" "-I{compiler.sdk.path}/include/freertos" "-I{compiler.sdk.path}/include/heap" "-I{compiler.sdk.path}/include/jsmn" "-I{compiler.sdk.path}/include/log" "-I{compiler.sdk.path}/include/mdns" "-I{compiler.sdk.path}/include/mbedtls" "-I{compiler.sdk.path}/include/mbedtls_port" "-I{compiler.sdk.path}/include/newlib" "-I{compiler.sdk.path}/include/nvs_flash" "-I{compiler.sdk.path}/include/openssl" "-I{compiler.sdk.path}/include/spi_flash" "-I{compiler.sdk.path}/include/sdmmc" "-I{compiler.sdk.path}/include/smartconfig_ack" "-I{compiler.sdk.path}/include/spiffs" "-I{compiler.sdk.path}/include/tcpip_adapter" "-I{compiler.sdk.path}/include/ulp" "-I{compiler.sdk.path}/include/vfs" "-I{compiler.sdk.path}/include/wear_levelling" "-I{compiler.sdk.path}/include/xtensa-debug-module" "-I{compiler.sdk.path}/include/coap" "-I{compiler.sdk.path}/include/console" "-I{compiler.sdk.path}/include/expat" "-I{compiler.sdk.path}/include/json" "-I{compiler.sdk.path}/include/lwip" "-I{compiler.sdk.path}/include/newlib" "-I{compiler.sdk.path}/include/nghttp" "-I{compiler.sdk.path}/include/soc" "-I{compiler.sdk.path}/include/wpa_supplicant"
+compiler.c.cmd=xtensa-esp32-elf-gcc
+compiler.c.flags=-std=gnu99 -Os -g3 -fstack-protector -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -mlongcalls -nostdlib -Wpointer-arith {compiler.warning_flags} -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-sign-compare -Wno-old-style-declaration -MMD -c
+compiler.cpp.cmd=xtensa-esp32-elf-g++
+compiler.cpp.flags=-std=gnu++11 -fno-exceptions -Os -g3 -Wpointer-arith -fexceptions -fstack-protector -ffunction-sections -fdata-sections -fstrict-volatile-bitfields -mlongcalls -nostdlib {compiler.warning_flags} -Wno-error=unused-function -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=deprecated-declarations -Wno-unused-parameter -Wno-sign-compare -fno-rtti -MMD -c
+compiler.S.cmd=xtensa-esp32-elf-gcc
+compiler.S.flags=-c -g3 -x assembler-with-cpp -MMD -mlongcalls
+compiler.c.elf.cmd=xtensa-esp32-elf-gcc
+compiler.c.elf.flags=-nostdlib "-L{compiler.sdk.path}/lib" "-L{compiler.sdk.path}/ld" -T esp32_out.ld -T esp32.common.ld -T esp32.rom.ld -T esp32.peripherals.ld -T esp32.rom.spiram_incompatible_fns.ld -u ld_include_panic_highint_hdl -u call_user_start_cpu0 -Wl,--gc-sections -Wl,-static -Wl,--undefined=uxTopUsedPriority  -u __cxa_guard_dummy -u __cxx_fatal_exception
+compiler.c.elf.libs=-lgcc -lopenssl -lbtdm_app -lfatfs -lwps -lcoexist -lwear_levelling -lesp_http_client -lhal -lnewlib -ldriver -lbootloader_support -lpp -lmesh -lsmartconfig -ljsmn -lwpa -lethernet -lphy -lapp_trace -lconsole -lulp -lwpa_supplicant -lfreertos -lbt -lmicro-ecc -lcxx -lxtensa-debug-module -lmdns -lvfs -lsoc -lcore -lsdmmc -lcoap -ltcpip_adapter -lc_nano -lesp-tls -lrtc -lspi_flash -lwpa2 -lesp32 -lapp_update -lnghttp -lspiffs -lespnow -lnvs_flash -lesp_adc_cal -llog -lsmartconfig_ack -lexpat -lm -lc -lheap -lmbedtls -llwip -lnet80211 -lpthread -ljson  -lstdc++
+compiler.as.cmd=xtensa-esp32-elf-as
+compiler.ar.cmd=xtensa-esp32-elf-ar
+compiler.ar.flags=cru
+compiler.size.cmd=xtensa-esp32-elf-size
+build.code_debug=0
+build.extra_flags=-DESP32 -DCORE_DEBUG_LEVEL={build.code_debug} {build.defines}
+compiler.c.extra_flags=
+compiler.c.elf.extra_flags=
+compiler.S.extra_flags=
+compiler.cpp.extra_flags=
+compiler.ar.extra_flags=
+compiler.objcopy.eep.extra_flags=
+compiler.elf2hex.extra_flags=
+recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.cpreprocessor.flags} {compiler.c.flags} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} -DARDUINO_BOARD="{build.board}" -DARDUINO_VARIANT="{build.variant}" {compiler.c.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpreprocessor.flags} {compiler.cpp.flags} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} -DARDUINO_BOARD="{build.board}" -DARDUINO_VARIANT="{build.variant}" {compiler.cpp.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.S.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.cpreprocessor.flags} {compiler.S.flags} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} -DARDUINO_BOARD="{build.board}" -DARDUINO_VARIANT="{build.variant}" {compiler.S.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} {compiler.ar.extra_flags} "{archive_file_path}" "{object_file}"
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} {compiler.c.elf.extra_flags} -Wl,--start-group {object_files} "{build.path}/{archive_file}" {compiler.c.elf.libs} -Wl,--end-group -Wl,-EL -o "{build.path}/{build.project_name}.elf"
+recipe.objcopy.eep.pattern={tools.gen_esp32part.cmd} -q "{runtime.platform.path}/tools/partitions/{build.partitions}.csv" "{build.path}/{build.project_name}.partitions.bin"
+recipe.objcopy.hex.pattern="{tools.esptool.path}/{tools.esptool.cmd}" --chip esp32 elf2image --flash_mode "{build.flash_mode}" --flash_freq "{build.flash_freq}" --flash_size "{build.flash_size}" -o "{build.path}/{build.project_name}.bin" "{build.path}/{build.project_name}.elf"
+recipe.objcopy.hex.pattern.linux=python "{tools.esptool.path}/{tools.esptool.cmd}" --chip esp32 elf2image --flash_mode "{build.flash_mode}" --flash_freq "{build.flash_freq}" --flash_size "{build.flash_size}" -o "{build.path}/{build.project_name}.bin" "{build.path}/{build.project_name}.elf"
+recipe.output.tmp_file={build.project_name}.bin
+recipe.output.save_file={build.project_name}.{build.variant}.bin
+recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build.project_name}.elf"
+recipe.size.regex=^(?:\.iram0\.text|\.iram0\.vectors|\.dram0\.data|\.flash\.text|\.flash\.rodata|)\s+([0-9]+).*
+recipe.size.regex.data=^(?:\.dram0\.data|\.dram0\.bss|\.noinit)\s+([0-9]+).*
+tools.esptool.upload.protocol=esp32
+tools.esptool.upload.params.verbose=
+tools.esptool.upload.params.quiet=
+tools.esptool.upload.pattern="{path}/{cmd}" --chip esp32 --port "{serial.port}" --baud {upload.speed}  --before default_reset --after hard_reset write_flash -z --flash_mode {build.flash_mode} --flash_freq {build.flash_freq} --flash_size detect 0xe000 "{runtime.platform.path}/tools/partitions/boot_app0.bin" 0x1000 "{runtime.platform.path}/tools/sdk/bin/bootloader_{build.boot}_{build.flash_freq}.bin" 0x10000 "{build.path}/{build.project_name}.bin" 0x8000 "{build.path}/{build.project_name}.partitions.bin"
+tools.esptool.upload.pattern.linux=python "{path}/{cmd}" --chip esp32 --port "{serial.port}" --baud {upload.speed}  --before default_reset --after hard_reset write_flash -z --flash_mode {build.flash_mode} --flash_freq {build.flash_freq} --flash_size detect 0xe000 "{runtime.platform.path}/tools/partitions/boot_app0.bin" 0x1000 "{runtime.platform.path}/tools/sdk/bin/bootloader_{build.boot}_{build.flash_freq}.bin" 0x10000 "{build.path}/{build.project_name}.bin" 0x8000 "{build.path}/{build.project_name}.partitions.bin"
+tools.esptool.upload.network_pattern={network_cmd} -i "{serial.port}" -p "{network.port}" "--auth={network.password}" -f "{build.path}/{build.project_name}.bin"
+vm.platform.root.path=C:\Program Files (x86)\Atmel\Studio\7.0\Extensions\2bvsfff5.20h\Micro Platforms\arduino16x
+runtime.tools.xtensa-esp32-elf-gcc.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\xtensa-esp32-elf-gcc\1.22.0-80-g6c4433a-5.2.0
+runtime.tools.xtensa-esp32-elf-gcc-1.22.0-80-g6c4433a-5.2.0.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\xtensa-esp32-elf-gcc\1.22.0-80-g6c4433a-5.2.0
+runtime.tools.esptool.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\esptool\2.3.1
+runtime.tools.esptool-2.3.1.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\esptool\2.3.1
+runtime.tools.mkspiffs.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\mkspiffs\0.2.3
+runtime.tools.mkspiffs-0.2.3.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\mkspiffs\0.2.3
+runtime.tools.arduinoOTA.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.arduinoOTA-1.1.1.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.arm-none-eabi-gcc.path=C:\Users\Matas\AppData\Local\arduino15\packages\STM32\tools\arm-none-eabi-gcc\6-2017-q2-update
+runtime.tools.arm-none-eabi-gcc-4.8.3-2014q1.path=C:\Users\Matas\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1
+runtime.tools.arm-none-eabi-gcc-6-2017-q2-update.path=C:\Users\Matas\AppData\Local\arduino15\packages\STM32\tools\arm-none-eabi-gcc\6-2017-q2-update
+runtime.tools.avrdude.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.avrdude-6.3.0-arduino9.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.avr-gcc.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.avr-gcc-4.9.2-atmel3.5.4-arduino2.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.CMSIS.path=C:\Users\Matas\AppData\Local\arduino15\packages\arduino\tools\CMSIS\4.5.0
+runtime.tools.CMSIS-4.5.0.path=C:\Users\Matas\AppData\Local\arduino15\packages\arduino\tools\CMSIS\4.5.0
+runtime.tools.esptool-0.4.13.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp8266\tools\esptool\0.4.13
+runtime.tools.gcc-arm-none-eabi.path=C:\Users\Matas\AppData\Local\arduino15\packages\sandeepmistry\tools\gcc-arm-none-eabi\5_2-2015q4
+runtime.tools.gcc-arm-none-eabi-5_2-2015q4.path=C:\Users\Matas\AppData\Local\arduino15\packages\sandeepmistry\tools\gcc-arm-none-eabi\5_2-2015q4
+runtime.tools.mkspiffs-0.2.0.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp8266\tools\mkspiffs\0.2.0
+runtime.tools.nrf5x-cl-tools.path=C:\Users\Matas\AppData\Local\arduino15\packages\arduino\tools\nrf5x-cl-tools\9.3.1
+runtime.tools.nrf5x-cl-tools-9.3.1.path=C:\Users\Matas\AppData\Local\arduino15\packages\arduino\tools\nrf5x-cl-tools\9.3.1
+runtime.tools.openocd.path=C:\Users\Matas\AppData\Local\arduino15\packages\sandeepmistry\tools\openocd\0.10.0-dev.nrf5
+runtime.tools.openocd-0.10.0-arduino1-static.path=C:\Users\Matas\AppData\Local\arduino15\packages\arduino\tools\openocd\0.10.0-arduino1-static
+runtime.tools.openocd-0.10.0-dev.nrf5.path=C:\Users\Matas\AppData\Local\arduino15\packages\sandeepmistry\tools\openocd\0.10.0-dev.nrf5
+runtime.tools.sdk.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\sdk\lib
+runtime.tools.sdk-bin.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\sdk\bin
+runtime.tools.sdk-include.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\sdk\include
+runtime.tools.sdk-ld.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\sdk\ld
+runtime.tools.sdk-lib.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\sdk\lib
+runtime.tools.STM32Tools.path=C:\Users\Matas\AppData\Local\arduino15\packages\STM32\tools\STM32Tools\2017.9.22
+runtime.tools.STM32Tools-2017.9.22.path=C:\Users\Matas\AppData\Local\arduino15\packages\STM32\tools\STM32Tools\2017.9.22
+runtime.tools.tools-avr.path=C:\Program Files (x86)\Arduino\hardware\tools\avr
+runtime.tools.xtensa-lx106-elf-gcc.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2
+runtime.tools.xtensa-lx106-elf-gcc-1.20.0-26-gb404fb9-2.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp8266\tools\xtensa-lx106-elf-gcc\1.20.0-26-gb404fb9-2
+runtime.vm.boardinfo.id=esp32_fm-devkit
+runtime.vm.boardinfo.name=esp32_fm-devkit
+runtime.vm.boardinfo.desc=ESP32 FM DevKit
+runtime.vm.boardinfo.src_location=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.0
+ide.hint=Use installed IDE. Provides built-in hardware, reference/help and libraries.
+ide.location.key=Arduino16x
+ide.location.ide.winreg=Arduino 1.6.x Application
+ide.location.sketchbook.winreg=Arduino 1.6.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.default.revision_name=1.9.0
+ide.default.version=10800
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=Arduino.h
+ide.exe_name=arduino
+ide.recipe.preproc.defines.flags=-w -x c++ -E -dM
+ide.platformswithoutpackage=false
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionGTEQ=160
+ide.exe=arduino.exe
+ide.builder.exe=arduinobuilder.exe
+ide.builder.name=Arduino Builder
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+ide.help.reference.path=reference
+ide.help.reference.path2=reference\www.arduino.cc\en\Reference
+ide.help.reference.serial=reference\www.arduino.cc\en\Serial
+ide.location.preferences.portable={runtime.ide.path}\portable
+ide.location.preferences.arduinoData={runtime.sketchbook.path}\ArduinoData
+ide.location.preferences=%VM_APPDATA_LOCAL%\arduino15\preferences.txt
+ide.location.preferences_fallback=%VM_APPDATA_ROAMING%\arduino15\preferences.txt
+ide.location.contributions=%VM_APPDATA_LOCAL%\arduino15
+ide.location.contributions_fallback=%VM_APPDATA_ROAMING%\arduino15
+ide.contributions.boards.allow=true
+ide.contributions.boards.ignore_unless_rewrite_found=true
+ide.contributions.libraries.allow=true
+ide.contributions.boards.support.urls.wiki=https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls
+ide.create_platforms_from_boardsTXT.teensy=build.core
+vm.debug=true
+software=ARDUINO
+ssh.user.name=root
+ssh.user.default.password=arduino
+ssh.host.wwwfiles.path=/www/sd
+build.working_directory={runtime.ide.path}\java\bin
+ide.appid=arduino16x
+location.sketchbook=D:\Dokumenty\Arduino
+build.core.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.0\cores\esp32
+vm.core.include=arduino.h
+vm.boardsource.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.0
+runtime.platform.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\hardware\esp32\1.0.0
+vm.platformname.name=esp32
+build.arch=ESP32
+builder.noino=false
+build.architecture=1.22.0-80-g6c4433a-5.2.0
+vmresolved.compiler.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\xtensa-esp32-elf-gcc\1.22.0-80-g6c4433a-5.2.0\bin\
+vmresolved.tools.path=C:\Users\Matas\AppData\Local\arduino15\packages\esp32\tools\xtensa-esp32-elf-gcc\1.22.0-80-g6c4433a-5.2.0
+intellisense.include.paths={runtime.hardware.path}
+build.project_name=FMDevKit_BluetoothAudio.ino
+build.project_path=D:\FOG\DevKits\FW\FMDevKit_BluetoothAudio
+sketch_path=D:\FOG\DevKits\FW\FMDevKit_BluetoothAudio
+ProjectDir=D:\FOG\DevKits\FW\FMDevKit_BluetoothAudio\
+build.path=C:\Users\Matas\AppData\Local\Temp\VMBuilds\FMDevKit_BluetoothAudio\esp32_fm-devkit\Debug
+</arduino.board.property_bag>
+        <arduino.build.mcu>esp32</arduino.build.mcu>
+        <arduino.build.f_cpu>240000000L</arduino.build.f_cpu>
+        <arduino.build.core>esp32</arduino.build.core>
+        <arduino.upload.maximum_size>1310720</arduino.upload.maximum_size>
+        <visualmicro.application.name>arduino16x</visualmicro.application.name>
+        <visualmicro.package.name>esp32</visualmicro.package.name>
+        <visualmicro.platform.name>esp32</visualmicro.platform.name>
+        <vm.upload.useprogrammer>0</vm.upload.useprogrammer>
+        <arduino.upload.port>COM30</arduino.upload.port>
+        <custom_esp32_esp32_UploadSpeed>921600</custom_esp32_esp32_UploadSpeed>
+        <custom_esp32_esp32_DebugLevel>verbose</custom_esp32_esp32_DebugLevel>
+        <custom_esp32_esp32_PartitionScheme>default</custom_esp32_esp32_PartitionScheme>
+        <custom_esp32_esp32_FlashMode>qio</custom_esp32_esp32_FlashMode>
+        <custom_esp32_esp32_FlashFreq>40</custom_esp32_esp32_FlashFreq>
+        <custom_esp32_esp32_FlashSize>4M</custom_esp32_esp32_FlashSize>
+        <custom_esp32_esp32_PSRAM>disabled</custom_esp32_esp32_PSRAM>
+        <custom_esp32_fm-devkit_DebugLevel>none</custom_esp32_fm-devkit_DebugLevel>
+        <ValidatedAS7>1</ValidatedAS7>
+      </VisualMicroSettings>
+    </VisualMicroSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="FMDevKit_BluetoothAudio.ino">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="__vm\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bt_app_av.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="bt_app_av.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="bt_app_core.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="bt_app_core.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="symbols.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="unused_tests.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="__vm\.FMDevKit_BluetoothAudio.vsarduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

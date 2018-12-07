@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Atmel Studio Solution File, Format Version 11.00
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "FMDevKit_BluetoothAudio", "FMDevKit_BluetoothAudio.cppproj", "{AD54C8EB-9783-48FA-9761-ADFBC741301F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Release|ARM = Release|ARM
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD54C8EB-9783-48FA-9761-ADFBC741301F}.Debug|ARM.ActiveCfg = Debug|ARM
+		{AD54C8EB-9783-48FA-9761-ADFBC741301F}.Debug|ARM.Build.0 = Debug|ARM
+		{AD54C8EB-9783-48FA-9761-ADFBC741301F}.Release|ARM.ActiveCfg = Release|ARM
+		{AD54C8EB-9783-48FA-9761-ADFBC741301F}.Release|ARM.Build.0 = Release|ARM
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
