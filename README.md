@@ -26,10 +26,10 @@
 
 |  Board Label | Arduino Pin Definition | ESP32 Pin Number |  Description | 
 | ------------ | ------------ | ------------ | ------------ |
-| D0 | D0 | 34 | GPIO Pin |
-| D1 | D1 | 35 | GPIO Pin |
-| D2 | D2 | 32 | GPIO Pin |
-| D3 | D3 | 33 | GPIO Pin |
+| D0 | D0 | 34 | GPI Pin (Input Only) |
+| D1 | D1 | 35 | GPI Pin (Input Only) |
+| D2 | D2 | 32 | GPO Pin (Output Only) |
+| D3 | D3 | 33 | GPO Pin (Output Only) |
 | D4 | D4 | 27 | GPIO Pin |
 | D5 | D5 | 14 | GPIO Pin |
 | D6 | D6 | 12 | GPIO Pin |
