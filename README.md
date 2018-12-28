@@ -18,9 +18,14 @@
 
 ##### Build your own FM Radio station based on this kit! Use WiFi or Bluetooth as an audio source (default ESP32 example firmware uses Bluetooth A2DP sink). 
 
-![Top](https://raw.githubusercontent.com/dragon-engineer/esp32_fmdevkit/master/Hardware/Top.png "Top")
+##### First steps
 
-![Bottom](https://raw.githubusercontent.com/dragon-engineer/esp32_fmdevkit/master/Hardware/Bottom.png "Bottom")
+1) Connect USB to a computer/power bank
+2) Pair your laptop/phone with "ESP32-FM_DevKit"
+3) Play some music
+4) Tune the TX Frequency by UP/DOWN and confirm with OK button
+5) Tune your FM Radio receiver to this frequency
+6) Download the example code from here and do your own stuff
 
 ###### Pinout Information:
 
