@@ -45,9 +45,9 @@ static const uint8_t SDA = 16;
 static const uint8_t SCL = 17;
 
 // SPI - unused but you can create your own definition in your sketch
-static const uint8_t SCK = 0;
-static const uint8_t MISO = 0;
-static const uint8_t MOSI = 0;
-static const uint8_t SS = 0;
+static const int8_t SCK = -1;
+static const int8_t MISO = -1;
+static const int8_t MOSI = -1;
+static const int8_t SS = -1;
 
 #endif /* Pins_Arduino_h */
